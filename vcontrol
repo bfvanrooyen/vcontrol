@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+import argparse
+
+def main():
+  parser = argparse.ArgumentParser(description='VBoxManage Control')
+  args = parser.parse_args()
+
+if __name__ == "__main__":
+  #execute only if run as a script
+  main()
