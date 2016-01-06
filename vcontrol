@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import cli_arguments
+import cli_commands.list_command
 
 def main():
-    cli_arguments.parse_arguments()
+    cli_commands.list_command.parse_arguments()
 
 if __name__ == "__main__":
     #execute only if run as a script
