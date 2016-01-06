@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import cli_arguments
+
+def main():
+    cli_arguments.parse_arguments()
+
+if __name__ == "__main__":
+    #execute only if run as a script
+    main()
