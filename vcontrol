@@ -2,12 +2,12 @@
 
 import argparse
 import sys
-import cli_commands.list_command
+from cli_commands import list_command
 
 def main():
     main_parser = argparse.ArgumentParser()
     subparsers = main_parser.add_subparsers(dest='cmd')
-    cli_commands.list_command.parse_arguments(subparsers)
+    list_command.parse_arguments(subparsers)
        
     if len(sys.argv) == 1:
         main_parser.print_help()
