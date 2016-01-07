@@ -1,9 +1,19 @@
 #!/usr/bin/python3
 
+import argparse
+import sys
 import cli_commands.list_command
 
 def main():
-    cli_commands.list_command.parse_arguments()
+    main_parser = argparse.ArgumentParser()
+    subparsers = main_parser.add_subparsers(dest='cmd')
+    cli_commands.list_command.parse_arguments(subparsers)
+       
+    if len(sys.argv) == 1:
+        main_parser.print_help()
+    else:
+        args = main_parser.parse_args()
+        args.func(args)
 
 if __name__ == "__main__":
     #execute only if run as a script
