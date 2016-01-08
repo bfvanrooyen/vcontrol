@@ -3,6 +3,7 @@
 import argparse
 import sys
 from cli_commands.list_command import ListCommand
+from cli_commands.start_command import StartCommand
 
 def main():
     main_parser = argparse.ArgumentParser()
@@ -10,6 +11,9 @@ def main():
 
     list_command = ListCommand()
     list_command.parse_arguments(subparsers)
+
+    start_command = StartCommand()
+    start_command.parse_arguments(subparsers)
        
     if len(sys.argv) == 1:
         main_parser.print_help()
